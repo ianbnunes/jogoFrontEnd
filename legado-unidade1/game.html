@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrida das Relíquias - Partida</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="game-body">
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Partida em andamento</p>
+        <h1>Corrida das Relíquias</h1>
+      </div>
+      <a class="secondary-link" href="index.html">Nova configuração</a>
+    </header>
+
+    <section class="status-banner">
+      <div>
+        <p class="banner-label">Vez atual</p>
+        <h2 id="turn-indicator">Preparando jogadores...</h2>
+      </div>
+      <div class="banner-actions">
+        <button id="roll-button" class="primary-button">Rolar dado</button>
+        <button id="reset-button" class="ghost-button">Reiniciar partida</button>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="board-panel">
+        <div class="board-header">
+          <div>
+            <p class="panel-label">Tabuleiro</p>
+            <h3>Trilha das 20 casas</h3>
+          </div>
+          <div class="dice-card">
+            <span class="dice-label">Último dado</span>
+            <strong id="dice-value">-</strong>
+          </div>
+        </div>
+
+        <div id="board" class="board" aria-label="Tabuleiro da corrida"></div>
+
+        <div class="legend">
+          <span><i class="token-dot token-one"></i><span id="legend-player-1">Jogador 1</span></span>
+          <span><i class="token-dot token-two"></i><span id="legend-player-2">Jogador 2</span></span>
+          <span><i class="finish-dot"></i>Chegada</span>
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <article class="score-panel">
+          <div class="panel-heading">
+            <p class="panel-label">Placar</p>
+            <h3>Pontuação dos aventureiros</h3>
+          </div>
+          <div id="scoreboard" class="scoreboard"></div>
+        </article>
+
+        <article class="table-panel">
+          <div class="panel-heading">
+            <p class="panel-label">Tabela dinâmica</p>
+            <h3>Ranking da rodada</h3>
+          </div>
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Posição</th>
+                <th>Jogador</th>
+                <th>Casa</th>
+                <th>Pontos</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-body"></tbody>
+          </table>
+        </article>
+
+        <article class="log-panel">
+          <div class="panel-heading">
+            <p class="panel-label">Lista dinâmica</p>
+            <h3>Histórico de jogadas</h3>
+          </div>
+          <ul id="move-log" class="move-log"></ul>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <div id="winner-modal" class="winner-modal hidden" role="dialog" aria-modal="true" aria-labelledby="winner-title">
+    <div class="winner-card">
+      <p class="eyebrow">Fim de jogo</p>
+      <h2 id="winner-title">Temos um vencedor</h2>
+      <p id="winner-message"></p>
+      <button id="play-again-button" class="primary-button">Jogar novamente</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

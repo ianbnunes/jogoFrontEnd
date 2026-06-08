@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrida das Relíquias</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing-body">
+  <main class="landing-shell">
+    <section class="hero-card">
+      <p class="eyebrow">Jogo para 2 jogadores locais</p>
+      <h1>Corrida das Relíquias</h1>
+      <p class="hero-copy">
+        Dois aventureiros disputam uma trilha cheia de energia arcana. Cada rodada
+        move as peças pelo tabuleiro, atualiza o placar e registra tudo em tempo real.
+      </p>
+
+      <div class="feature-strip">
+        <article>
+          <span class="feature-number">01</span>
+          <p>Movimento animado das peças no tabuleiro.</p>
+        </article>
+        <article>
+          <span class="feature-number">02</span>
+          <p>Partida local para dois jogadores humanos.</p>
+        </article>
+        <article>
+          <span class="feature-number">03</span>
+          <p>Placar, ranking e histórico atualizados via JS.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="setup-card">
+      <h2>Configurar partida</h2>
+      <p class="setup-copy">Informe os nomes dos dois jogadores para iniciar o desafio.</p>
+
+      <form id="start-form" class="setup-form" novalidate>
+        <label for="player1">Jogador 1</label>
+        <input id="player1" name="player1" type="text" maxlength="20" placeholder="Ex.: Lara" required>
+
+        <label for="player2">Jogador 2</label>
+        <input id="player2" name="player2" type="text" maxlength="20" placeholder="Ex.: Ravi" required>
+
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+
+        <button type="submit" class="primary-button">Iniciar jogo</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

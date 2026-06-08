@@ -1,0 +1,19 @@
+{
+  "name": "corrida-das-reliquias-server",
+  "version": "2.0.0",
+  "description": "Servidor central (cerebro) do jogo Corrida das Reliquias - regras, dado, pontuacao e turnos via Socket.IO",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
